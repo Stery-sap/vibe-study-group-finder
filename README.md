@@ -97,6 +97,21 @@ The application should now be running at `http://127.0.0.1:5000/`.
     * **Delete Group:** (As the Group Creator) click "Delete Group" and confirm.
         * *Warning: This action is irreversible and deletes all group data, members, and messages.*
 
+## ⚠️ Challenges & Learnings
+
+* **Jinja2 Template Syntax:** Encountered `UndefinedError` due to missing variables and `TemplateSyntaxError` (e.g., using `break` in Jinja2), highlighting the need for careful variable passing and understanding template-specific syntax.
+* **SQLAlchemy Database Initialization:** Debugging `sqlalchemy.exc.OperationalError: no such table` and `sqlalchemy.exc.InvalidRequestError: Table already defined` revealed nuances of Flask's development server (`flask run` vs `python app.py`) and the importance of `flask init-db`, `use_reloader=False`, and `__table_args__ = {'extend_existing': True}` for robust local development setup.
+* **Session Management & Data Persistence:** Learning how to manage user sessions (`session` object) and ensuring data persists correctly in the SQLite database.
+* **Relationship Management:** Understanding many-to-many relationships (User-Group via `GroupMember`) and `cascade` options for data integrity.
+
+## 💡 Future Enhancements
+
+* **Real-time Chat:** Implement WebSockets (e.g., with Flask-SocketIO) for instant message updates without page refresh.
+* **Advanced Matching:** Incorporate NLP for more semantic understanding of subjects/goals, or machine learning-based recommendations.
+* **Notifications:** Alert users about new messages, group requests, or daily goal reminders.
+* **Group Events/Scheduling:** Add a calendar or scheduling feature for study sessions.
+* **File Sharing:** Allow members to share study materials within groups.
+* **User Profiles (Public View):** Create public profile pages for users to see basic info about potential study partners.
 
 ## 🤝 Contributing
 
