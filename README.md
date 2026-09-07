@@ -113,9 +113,6 @@ The application should now be running at `http://127.0.0.1:5000/`.
 * **File Sharing:** Allow members to share study materials within groups.
 * **User Profiles (Public View):** Create public profile pages for users to see basic info about potential study partners.
 
-## 🤝 Contributing
-
-Feel free to fork the repository and contribute!
 
 ## 📄 License
 
